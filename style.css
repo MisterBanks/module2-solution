@@ -51,15 +51,15 @@ h1 {
 }
 
 .section:nth-child(1) .section-title { /* Target the title of the first section (Chicken) */
-    background-color: #D2B48C; /* Light brown */
+    background-color: green; /* Light brown */
 }
 
 .section:nth-child(2) .section-title { /* Target the title of the second section (Beef) */
-    background-color: #8B4513; /* Brown */
+    background-color: Brown; /* Brown */
 }
 
 .section:nth-child(3) .section-title { /* Target the title of the third section (Sushi) */
-    background-color: yellow; /* Yellow */
+    background-color: rad; /* Yellow */
 }
 
 
