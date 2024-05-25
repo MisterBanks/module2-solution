@@ -1,64 +1,75 @@
-/* Basic styling */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    font-family: Arial, sans-serif; /* Optional: Set a custom font-family */
 }
 
 h1 {
     text-align: center;
-    margin: 20px 0;
 }
 
-/* Container styling */
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-/* Section styling */
-.section {
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
     box-sizing: border-box;
-    position: relative;
-    background-color: #f2f2f2;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.section {
     flex: 1;
-}
-
-/* Section title region */
-.section h2 {
-    background-color: #ffcc00;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    margin: 0;
-    padding: 5px;
+    box-sizing: border-box;
+    margin: 0 10px;
     border: 1px solid black;
+    background-color: #f0f0f0; /* Set your desired background color */
+    padding: 20px;
+    position: relative;
 }
 
-/* Media Queries */
-@media (min-width: 992px) {
-    .section {
-        width: 30%;
-    }
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #333; /* Set your desired title background color */
+    color: #fff; /* Set your desired title text color */
+    padding: 5px 10px;
+    margin: 0;
+    border-bottom-left-radius: 5px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-    .section {
-        width: 45%;
-    }
-
-    .section:nth-child(3) {
-        width: 100%;
-    }
+.section:nth-child(1) { /* Target the first section (Chicken) */
+    background-color: #88898a; /* Pencil color */
 }
 
-@media (max-width: 767px) {
+.section:nth-child(2) { /* Target the second section (Beef) */
+    background-color: #88898a; /* Pencil color */
+}
+
+.section:nth-child(3) { /* Target the third section (Sushi) */
+    background-color: #88898a; /* Pencil color */
+}
+
+.section:nth-child(1) .section-title { /* Target the title of the first section (Chicken) */
+    background-color: #D2B48C; /* Light brown */
+}
+
+.section:nth-child(2) .section-title { /* Target the title of the second section (Beef) */
+    background-color: #8B4513; /* Brown */
+}
+
+.section:nth-child(3) .section-title { /* Target the title of the third section (Sushi) */
+    background-color: yellow; /* Yellow */
+}
+
+
+@media only screen and (max-width: 767px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    
     .section {
-        width: 100%;
+        flex-basis: 100%;
+        margin: 10px 0;
     }
 }
